@@ -46,7 +46,8 @@ int main(void)
        	int i = 0;
 	while (i < count / 2)   
 	{	scanf("%s", name);
-		fputs(name, fp);
+		/* fputs(name, fp);*/
+		fprintf(fp, "%s\n", name);
 		i++;
 	}
 	/* Now, close that file! */
@@ -56,12 +57,12 @@ int main(void)
 	{
 		printf("Enter your name and age respectively\n");
 		scanf("%s %d", name, &age);
-		fprintf(fp, "%s %d",  name, age);
+		fprintf(fp, "%s: %d\n",  name, age);
 	}
 
 	fclose(fp);
 
-	printf("Thanks for your input\n");
+	printf("\nThanks for your input\n");
 
 	return (0);
 }
